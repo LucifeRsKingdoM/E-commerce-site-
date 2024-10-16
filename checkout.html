@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Checkout</h1>
+    <div id="cart-items"></div>
+    <p id="total-amount">Grand Total: $0</p>
+
+    <h2>Customer Information</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" required><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea><br>
+
+        <label for="location">Fetch Live Location:</label>
+        <button onclick="getLocation()">Get Location</button>
+        <p id="location-output"></p><br>
+
+        <h2>Payment Method</h2>
+        <input type="radio" name="payment" value="Online" required> Online
+        <input type="radio" name="payment" value="COD" required> Cash on Delivery
+
+        <button type="button" onclick="checkout()">Proceed to WhatsApp</button>
+    </form>
+
+    <script src="script.js"></script>
+    <script>
+        displayCart(); // Show cart items on checkout page
+    </script>
+</body>
+</html>
